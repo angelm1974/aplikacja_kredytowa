@@ -71,5 +71,11 @@ namespace WindowsFormsApp8
         {
             txtOkres.Text = $"{trackBar2.Value.ToString()} m-cy.";
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listaKredytobiorcow krd = new listaKredytobiorcow();
+            krd.Show();
+        }
     }
 }

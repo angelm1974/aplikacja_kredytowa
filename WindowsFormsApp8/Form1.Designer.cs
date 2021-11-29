@@ -54,6 +54,7 @@ namespace WindowsFormsApp8
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -335,6 +336,18 @@ namespace WindowsFormsApp8
             this.label3.TabIndex = 1;
             this.label3.Text = "Przekonaj się, na jaki kredyt Cię stać";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(819, 547);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(136, 35);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Wyświetl";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -343,6 +356,7 @@ namespace WindowsFormsApp8
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1014, 595);
             this.ControlBox = false;
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -398,6 +412,7 @@ namespace WindowsFormsApp8
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.TextBox txtOkres;
         private System.Windows.Forms.TextBox txtKwota;
+        private System.Windows.Forms.Button button2;
     }
 }
 
