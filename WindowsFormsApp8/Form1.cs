@@ -44,8 +44,9 @@ namespace WindowsFormsApp8
             tekst += "Dane finansowe:\r\n";
             tekst += "kwota kredytu: " + txtKwota.Text + " okres kredytowania: " + txtOkres.Text + "\r\n";
             tekst += "Godzina kontaktu: " + cmbKontakt.Text + "\r\n";
-            tekst += "Złożono: " + DateTime.Now.ToString("dddd, dd MMMM yyyy") + "\r\n";
-
+            tekst += "Złożono: " + DateTime.Now.ToString("F") + "\r\n";
+            tekst += "Zgoda na prztwarzanie danych osobowych: " + ((checkBox1.Checked) ? "TAK" : "NIE") + "\r\n";
+            tekst += "Zgoda na otrzymywanie informacji handlowych: " + ((checkBox1.Checked) ? "TAK" : "NIE") + "\r\n";
             if (!File.Exists(path))
             {
             File.WriteAllText(path, tekst);
@@ -54,11 +55,11 @@ namespace WindowsFormsApp8
             {
               string  zmiana =  "kwota kredytu: " + txtKwota.Text + " okres kredytowania: " + txtOkres.Text + "\r\n";
                 zmiana += "Godzina kontaktu: " + cmbKontakt.Text + "\r\n";
-                zmiana += "Złożono: " + DateTime.Now.ToString("dddd, dd MMMM yyyy") + "\r\n";
+                zmiana += "Złożono: " + DateTime.Now.ToString("F") + "\r\n";
 
                 File.AppendAllText(path, zmiana);
             }
-        
+            MessageBox.Show("Dane zostały wysłane!", "Formularz kontaktowy", MessageBoxButtons.OK);
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
@@ -68,7 +69,7 @@ namespace WindowsFormsApp8
 
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
-            txtOkres.Text = $"{trackBar1.Value.ToString()} m-cy.";
+            txtOkres.Text = $"{trackBar2.Value.ToString()} m-cy.";
         }
     }
 }
