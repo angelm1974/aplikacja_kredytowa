@@ -41,15 +41,15 @@ namespace WindowsFormsApp8
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbKontakt = new System.Windows.Forms.ComboBox();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtOkres = new System.Windows.Forms.TextBox();
+            this.txtKwota = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtTelefon = new System.Windows.Forms.TextBox();
+            this.txtNazwisko = new System.Windows.Forms.TextBox();
+            this.txtImie = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -121,15 +121,15 @@ namespace WindowsFormsApp8
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.checkBox2);
             this.panel3.Controls.Add(this.checkBox1);
-            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.cmbKontakt);
             this.panel3.Controls.Add(this.trackBar2);
             this.panel3.Controls.Add(this.trackBar1);
-            this.panel3.Controls.Add(this.textBox5);
-            this.panel3.Controls.Add(this.textBox6);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txtOkres);
+            this.panel3.Controls.Add(this.txtKwota);
+            this.panel3.Controls.Add(this.txtEmail);
+            this.panel3.Controls.Add(this.txtTelefon);
+            this.panel3.Controls.Add(this.txtNazwisko);
+            this.panel3.Controls.Add(this.txtImie);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(344, 146);
             this.panel3.Name = "panel3";
@@ -188,103 +188,112 @@ namespace WindowsFormsApp8
             this.checkBox1.TabIndex = 12;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cmbKontakt
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 233);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(408, 28);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.Text = "Preferowana pora kontaktu";
+            this.cmbKontakt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cmbKontakt.FormattingEnabled = true;
+            this.cmbKontakt.Location = new System.Drawing.Point(112, 233);
+            this.cmbKontakt.Name = "cmbKontakt";
+            this.cmbKontakt.Size = new System.Drawing.Size(408, 28);
+            this.cmbKontakt.TabIndex = 11;
+            this.cmbKontakt.Text = "Preferowana pora kontaktu";
             // 
             // trackBar2
             // 
             this.trackBar2.Location = new System.Drawing.Point(112, 192);
+            this.trackBar2.Maximum = 72;
+            this.trackBar2.Minimum = 12;
             this.trackBar2.Name = "trackBar2";
             this.trackBar2.Size = new System.Drawing.Size(187, 45);
             this.trackBar2.TabIndex = 10;
             this.trackBar2.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBar2.Value = 12;
+            this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
             // 
             // trackBar1
             // 
             this.trackBar1.Location = new System.Drawing.Point(112, 152);
+            this.trackBar1.Maximum = 100000;
+            this.trackBar1.Minimum = 1000;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(187, 45);
             this.trackBar1.TabIndex = 9;
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBar1.Value = 1000;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
-            // textBox5
+            // txtOkres
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox5.Location = new System.Drawing.Point(333, 192);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(187, 24);
-            this.textBox5.TabIndex = 8;
-            this.textBox5.Text = "12 m-cy";
+            this.txtOkres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtOkres.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtOkres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtOkres.Location = new System.Drawing.Point(333, 192);
+            this.txtOkres.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.txtOkres.Name = "txtOkres";
+            this.txtOkres.Size = new System.Drawing.Size(187, 24);
+            this.txtOkres.TabIndex = 8;
+            this.txtOkres.Text = "12 m-cy";
             // 
-            // textBox6
+            // txtKwota
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox6.Location = new System.Drawing.Point(333, 152);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(187, 24);
-            this.textBox6.TabIndex = 7;
-            this.textBox6.Text = "15000 zł";
+            this.txtKwota.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKwota.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtKwota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtKwota.Location = new System.Drawing.Point(333, 152);
+            this.txtKwota.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.txtKwota.Name = "txtKwota";
+            this.txtKwota.ReadOnly = true;
+            this.txtKwota.Size = new System.Drawing.Size(187, 24);
+            this.txtKwota.TabIndex = 7;
+            this.txtKwota.Text = "15000 zł";
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox3.Location = new System.Drawing.Point(333, 112);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(187, 24);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.Text = "Email";
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmail.Location = new System.Drawing.Point(333, 112);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(187, 24);
+            this.txtEmail.TabIndex = 6;
+            this.txtEmail.Text = "Email";
             // 
-            // textBox4
+            // txtTelefon
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox4.Location = new System.Drawing.Point(112, 112);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(187, 24);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.Text = "Telefon";
+            this.txtTelefon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtTelefon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTelefon.Location = new System.Drawing.Point(112, 112);
+            this.txtTelefon.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.txtTelefon.Name = "txtTelefon";
+            this.txtTelefon.Size = new System.Drawing.Size(187, 24);
+            this.txtTelefon.TabIndex = 5;
+            this.txtTelefon.Text = "Telefon";
             // 
-            // textBox2
+            // txtNazwisko
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(333, 82);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(187, 24);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "Nazwisko";
+            this.txtNazwisko.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNazwisko.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtNazwisko.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNazwisko.Location = new System.Drawing.Point(333, 82);
+            this.txtNazwisko.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.txtNazwisko.Name = "txtNazwisko";
+            this.txtNazwisko.Size = new System.Drawing.Size(187, 24);
+            this.txtNazwisko.TabIndex = 4;
+            this.txtNazwisko.Text = "Nazwisko";
             // 
-            // textBox1
+            // txtImie
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(112, 82);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 24);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Imię";
+            this.txtImie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtImie.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtImie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtImie.Location = new System.Drawing.Point(112, 82);
+            this.txtImie.Margin = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            this.txtImie.Name = "txtImie";
+            this.txtImie.Size = new System.Drawing.Size(187, 24);
+            this.txtImie.TabIndex = 3;
+            this.txtImie.Text = "Imię";
             // 
             // label4
             // 
@@ -374,21 +383,21 @@ namespace WindowsFormsApp8
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtTelefon;
+        private System.Windows.Forms.TextBox txtNazwisko;
+        private System.Windows.Forms.TextBox txtImie;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbKontakt;
         private System.Windows.Forms.TrackBar trackBar2;
         private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtOkres;
+        private System.Windows.Forms.TextBox txtKwota;
     }
 }
 
